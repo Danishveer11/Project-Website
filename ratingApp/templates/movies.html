@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="{% static 'movies.css' %}">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">IMDb</div>
+    <ul class="nav-links">
+        <li>Home</li>
+        <li>Movies</li>
+        <li>TV Shows</li>
+        <li>Watchlist</li>
+    </ul>
+</nav>
+
+<!-- MOVIE SECTION -->
+<section class="movie-container">
+
+    <div class="movie-poster">
+        <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" alt="Movie Poster">
+    </div>
+
+    <div class="movie-details">
+        <h1>{{movie.title}}</h1>
+        <p class="genres">{{movie.genre_ids}}
+            
+        </p>
+
+        <div class="rating">
+            ⭐ {{movie.vote_average}}/10
+        </div>
+
+        <p class="overview">
+            {{movie.overview}}
+        </p>
+
+        <div class="buttons">
+            <button class="trailer-btn">▶ {{movie.video}}</button>
+            <button class="watchlist-btn">+ Add to Watchlist</button>
+        </div>
+    </div>
+
+</section>
+
+<!-- REVIEWS SECTION -->
+<section class="reviews-section">
+
+    <h2> Reviews</h2>
+
+    <!-- ADD REVIEW -->
+    <div class="add-review">
+        <h3>Add Your Review</h3>
+
+        <label>Rating</label>
+        <select>
+            <!-- write manually or auto-generate -->
+            <option value="">Select</option>
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2"2></option>
+            <option value="1">1</option>
+
+        </select>
+
+        <textarea placeholder="Write your review..."></textarea>
+        <button class="submit-review">Submit Review</button>
+    </div>
+
+    <!-- EXISTING REVIEWS -->
+    <div class="review">
+        <h4>John Doe ⭐ 9/10</h4>
+        <p>Amazing movie! Great visuals and storyline.</p>
+    </div>
+
+    <div class="review">
+        <h4>Jane Smith ⭐ 8/10</h4>
+        <p>Really enjoyed it. Some parts were slow but overall great.</p>
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href= "{% static 'style.css' %}" rel="stylesheet" >
+</head>
+<body>
+    
+
+    <div class="navbar">
+        <div class="logo">MyWebsite</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Modern Website Design</h1>
+            <p>Clean layout using popular colors and spacing.</p>
+        </div>
+        <div class="hero-box"></div>
+    </section>
+
+    <section class="content">
+        {% block body%}
+
+        {% endblock %}
+        <div class="cards">
+            <div class="card">
+                <h3>Card One</h3>
+                <p>Simple and clean UI design.</p>
+            </div>
+            <div class="card">
+                <h3>Card Two</h3>
+                <p>Modern spacing and shadows.</p>
+            </div>
+            <div class="card">
+                <h3>Card Three</h3>
+                <p>Reusable components.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 MyWebsite
+    </footer>
+
+
+</body>
+</html>

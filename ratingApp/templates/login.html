@@ -1,0 +1,9 @@
+
+{% block body %}
+    <form action= "{% url 'log'%}" method="POST">
+        {% csrf_token %}
+        {{ form}}
+        <button type="submit">Submit</button>
+    </form>
+    <p>Don't have account  <a href="{%url 'create_account'%}"> Create a new account</a></p>
+{% endblock%}
