@@ -63,10 +63,11 @@ async function searchAPI() {
             link.className = "movie_link"
             link.appendChild(div); 
             lists.appendChild(link);
-            resultsDiv.appendChild(lists); // append to the section tag
+            
 
             
         });
+        resultsDiv.appendChild(lists); // append to the section tag
         // error
     } catch (error) {
         console.error("Error fetching movies:", error);

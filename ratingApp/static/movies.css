@@ -144,9 +144,14 @@ textarea {
     resize: none;
 }
 
-.submit-review {
+.Delete_btns {
     margin-top: 15px;
-    background: #f5c518;
+    background: red;
+    font-weight: bold;
+}
+.btns {
+    margin-top: 15px;
+    background: yellow;
     font-weight: bold;
 }
 

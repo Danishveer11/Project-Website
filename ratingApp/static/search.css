@@ -31,7 +31,7 @@ input {
 
 /* Movie card */
 .movie_card {
-    width: 90%;
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
 
@@ -50,7 +50,8 @@ input {
 
 /* Poster */
 .poster {
-    width: 100%;
+    width: 130px;
+    height:100%;
     flex-shrink: 0;
     border-radius: 10px;
     overflow: hidden;

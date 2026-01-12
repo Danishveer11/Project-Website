@@ -5,9 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Movie Details</title>
+    
     <link rel="stylesheet" href="{% static 'movies.css' %}">
-
+    <script src="{% static 'movies.js' %}"></script>
 </head>
+
 <body>
 
 <!-- NAVBAR -->
@@ -60,7 +62,7 @@
         <h3>Add Your Review</h3>
 
         <label>Rating</label>
-        <select>
+        <select id="rating">
             <!-- write manually or auto-generate -->
             <option value="">Select</option>
             <option value="10">10</option>
@@ -71,15 +73,18 @@
             <option value="5">5</option>
             <option value="4">4</option>
             <option value="3">3</option>
-            <option value="2"2></option>
+            <option value="2">2</option>
             <option value="1">1</option>
 
         </select>
-
-        <textarea placeholder="Write your review..."></textarea>
-        <button class="submit-review">Submit Review</button>
+        <form id="MovieForm">
+            {% csrf_token %}
+        <textarea id="reviewInput" placeholder="Write your review..."></textarea>
+        <button class="btns">Submit Review</button>
+        
+        </form>
     </div>
-
+    <div id="reviews-container">
     <!-- EXISTING REVIEWS -->
     <div class="review">
         <h4>John Doe ⭐ 9/10</h4>
@@ -90,8 +95,8 @@
         <h4>Jane Smith ⭐ 8/10</h4>
         <p>Really enjoyed it. Some parts were slow but overall great.</p>
     </div>
-
+    </div>
 </section>
-
+    <section id="reviews"></section>
 </body>
 </html>
