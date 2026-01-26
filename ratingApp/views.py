@@ -17,8 +17,8 @@ def hello(request):
 class hello2(View):
     def get(self,request):
         return HttpResponse("hello world from class")
-
-def home(request):
+# user's review
+def review(request):
     form = ReviewForm()
     
     if request.method == 'POST':
@@ -26,7 +26,7 @@ def home(request):
         if form.is_valid():
             form.save()
             return HttpResponse("Success")
-    return render(request, 'review_in.html', {'form':form})
+    return render(request, 'movies.html', {'form':form})
 
 #  for login page
 def LogIn(request):
@@ -55,6 +55,14 @@ def account(request):
 # searches movie by id 
 def view_movies(request, movie_id):
     
+    form = ReviewForm()
+    
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponse("Success")
+
     try:
         movie = search_moviesByID(movie_id)
         
@@ -62,8 +70,6 @@ def view_movies(request, movie_id):
         return HttpResponse("Movie does not exist")
     
     return render(request, 'movies.html',{
-        
-        
         "movie": movie,
         })
 # search page
