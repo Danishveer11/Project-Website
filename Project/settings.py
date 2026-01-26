@@ -28,7 +28,7 @@ if not SECRET_KEY:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG") == "False"
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "yourapp.onrender.com"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "project-website-lp5v.onrender.com",]
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_COOKIE_AGE = 1600   # optional (30 minutes)

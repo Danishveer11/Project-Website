@@ -54,7 +54,9 @@ def account(request):
     return render(request, 'newAccount.html', {'form': form})
 # searches movie by id 
 def view_movies(request, movie_id):
-    
+  
+    if not(request.user.is_authenticated):
+        return redirect("log")
     form = ReviewForm()
     
     if request.method == 'POST':
