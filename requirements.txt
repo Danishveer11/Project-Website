@@ -8,3 +8,4 @@ sqlparse==0.5.4
 tzdata==2025.2
 urllib3==2.6.2
 gunicorn==21.2.0
+whitenoise
