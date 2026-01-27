@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #121212;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f5c518;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    cursor: pointer;
+    color: #ddd;
+}
+
+.nav-links li:hover {
+    color: white;
+}
+
+/* MOVIE SECTION */
+.movie-container {
+    display: flex;
+    gap: 40px;
+    padding: 50px;
+}
+
+.movie-poster img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.movie-details h1 {
+    font-size: 32px;
+}
+
+.genres {
+    margin: 10px 0;
+    color: #aaa;
+}
+
+.rating {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #f5c518;
+}
+
+.overview {
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.trailer-btn {
+    background: #f5c518;
+    color: black;
+    font-weight: bold;
+}
+
+.watchlist-btn {
+    background: #333;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* REVIEWS */
+.reviews-section {
+    padding: 40px 50px;
+    background: #121212;
+}
+
+.reviews-section h2 {
+    margin-bottom: 20px;
+}
+
+.add-review {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.add-review h3 {
+    margin-bottom: 10px;
+}
+
+.add-review label {
+    display: block;
+    margin-top: 10px;
+}
+
+select, textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    background: #0f0f0f;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.Delete_btns {
+    margin-top: 15px;
+    background: red;
+    font-weight: bold;
+}
+.btns {
+    margin-top: 15px;
+    background: yellow;
+    font-weight: bold;
+}
+
+/* REVIEW CARD */
+.review {
+    background: #1c1c1c;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.review h4 {
+    margin-bottom: 5px;
+    color: #f5c518;
+}
+
+.review p {
+    color: #ddd;
+}
