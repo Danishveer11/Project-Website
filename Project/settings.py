@@ -28,7 +28,7 @@ if not SECRET_KEY:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  False
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "project-website-lp5v.onrender.com",]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "HostmyProjects.pythonanywhere.com.",]
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_COOKIE_AGE = 1600   # optional (30 minutes)
@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'r_app_db',
-        'USER' : 'root',
-        'PASSWORD': 'MyfirstDB25!',
-        'HOST' : '127.0.0.1',
-        'PORT' : '3306',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '3306'),
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
