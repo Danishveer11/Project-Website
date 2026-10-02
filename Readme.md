@@ -1,1 +1,1 @@
-A  web application built using Django, MySQL, Python, HTML, CSS, JavaScript, and TMDB APIs. User can see different movies and shows by searching. They can add rating and review to the movie. I will be continue working on it.
+A  web application built using Django, MySQL, Python, HTML, CSS, JavaScript, and TMDB APIs. User can see different movies and shows by searching. They can add rating and review to the movie.
